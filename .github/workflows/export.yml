@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Install Gimp
-        run: sudo apt install gimp
+        run: sudo apt update && sudo apt install gimp
         
       - name: Export each {name}.xcf file to exports/{name}.png
         run: gimp -n -i -b - <<EOF
